@@ -154,6 +154,7 @@ public class User {
                                 while (loopGetBook != 3) {
                                     System.out.print('\u000C');
                                     db.getBook(chooseBook);
+                                    System.out.println(chooseBook);
                                     System.out.println("1) Buy\t2) Add to Cart\t3) Back");
                                     System.out.print("Choose Choice :");
                                     int chooseChoice = myObj.nextInt();

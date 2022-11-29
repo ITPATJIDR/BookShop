@@ -171,9 +171,9 @@ public class Database {
             pstmt.setInt(1, UserId);
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
-                return true;
-            }else{
                 return false;
+            }else{
+                return true;
             }
         }catch( Exception e){
             e.getMessage();
