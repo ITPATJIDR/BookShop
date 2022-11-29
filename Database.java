@@ -3,8 +3,8 @@ import java.sql.*;
 public class Database {
 
     private static final String DB_DRIVER = "org.sqlite.JDBC";
-    //private static final String DB_URL = "jdbc:sqlite:D:/com lang/Java project/BookShop/DB/BookShop.db";
-    private static final String DB_URL = "jdbc:sqlite:/Users/sasikarn/Documents/ProjectOop/BookShop/DB/Bookshop.db";
+    private static final String DB_URL = "jdbc:sqlite:D:/com lang/Java project/BookShop/DB/BookShop.db";
+    //private static final String DB_URL = "jdbc:sqlite:/Users/sasikarn/Documents/ProjectOop/BookShop/DB/Bookshop.db";
     Connection conn = null;
 
     public Database() {
