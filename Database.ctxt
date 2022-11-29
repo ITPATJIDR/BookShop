@@ -2,8 +2,8 @@
 comment0.target=Database
 comment1.params=
 comment1.target=Database()
-comment10.params=BookId
-comment10.target=boolean\ checkItemInCart(int)
+comment10.params=BookId\ UserId
+comment10.target=boolean\ checkItemInCart(int,\ int)
 comment11.params=userId
 comment11.target=void\ getAllCart(int)
 comment12.params=cartId

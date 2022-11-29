@@ -155,7 +155,7 @@ public class User {
                                     System.out.print('\u000C');
                                     db.getBook(chooseBook);
                                     System.out.println("1) Buy\t2) Add to Cart\t3) Back");
-                                    System.out.println("Choose Choice :");
+                                    System.out.print("Choose Choice :");
                                     int chooseChoice = myObj.nextInt();
                                     if (chooseChoice == 1) {
                                         System.out.print('\u000C');
@@ -170,7 +170,7 @@ public class User {
                                         }
 
                                     } else if (chooseChoice == 2) {
-                                        if (db.checkItemInCart(chooseBook)) {
+                                        if (db.checkItemInCart(chooseBook,globalID)) {
                                             try {
                                                 System.out.print('\u000C');
                                                 System.out.println("This book is already in your cart !!!");
@@ -196,6 +196,15 @@ public class User {
                                     } else if (chooseChoice == 3) {
                                         System.out.print('\u000C');
                                         break;
+                                    }else{
+                                        try{
+                                            System.out.print("Wrong Choice...");
+                                            Thread.sleep(1000);
+                                            System.out.print('\u000C');
+                                            break;
+                                        }catch( Exception e ){
+                                            e.getMessage();
+                                        }
                                     }
                                 }
                             } else {

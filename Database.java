@@ -163,11 +163,12 @@ public class Database {
         }
     }
 
-    public boolean checkItemInCart(int BookId){
-        String sql = "SELECT * FROM cart WHERE BookId = ? ";
+    public boolean checkItemInCart(int BookId ,int UserId){
+        String sql = "SELECT * FROM cart WHERE BookId = ? AND UserId = ? ";
 
         try(PreparedStatement pstmt = conn.prepareStatement(sql)){
             pstmt.setInt(1, BookId);
+            pstmt.setInt(1, UserId);
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
                 return true;
