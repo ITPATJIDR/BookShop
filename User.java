@@ -154,7 +154,6 @@ public class User {
                                 while (loopGetBook != 3) {
                                     System.out.print('\u000C');
                                     db.getBook(chooseBook);
-                                    System.out.println(chooseBook);
                                     System.out.println("1) Buy\t2) Add to Cart\t3) Back");
                                     System.out.print("Choose Choice :");
                                     int chooseChoice = myObj.nextInt();
@@ -172,16 +171,6 @@ public class User {
 
                                     } else if (chooseChoice == 2) {
                                         if (db.checkItemInCart(chooseBook,globalID)) {
-                                            try {
-                                                System.out.print('\u000C');
-                                                System.out.println("This book is already in your cart !!!");
-                                                Thread.sleep(1000);
-                                                System.out.print('\u000C');
-                                                break;
-                                            } catch (Exception e) {
-                                                e.getMessage();
-                                            }
-                                        } else {
                                             System.out.print('\u000C');
                                             System.out.println("Add to Cart Success!!!");
                                             db.addCart(chooseBook, globalID);
@@ -189,6 +178,16 @@ public class User {
                                                 Thread.sleep(1000);
                                                 System.out.print('\u000C');
                                                 menu = 0;
+                                                break;
+                                            } catch (Exception e) {
+                                                e.getMessage();
+                                            }
+                                        } else {
+                                            try {
+                                                System.out.print('\u000C');
+                                                System.out.println("This book is already in your cart !!!");
+                                                Thread.sleep(1000);
+                                                System.out.print('\u000C');
                                                 break;
                                             } catch (Exception e) {
                                                 e.getMessage();
