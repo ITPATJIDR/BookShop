@@ -1,15 +1,11 @@
 import java.util.Scanner;
-import java.util.Date;
 import java.lang.Thread;
 
 public class User {
     int menu = 0;
-    int i = 0;
     Scanner myObj = new Scanner(System.in);
-    Date date = new Date();
     Database db = new Database();
     boolean loginStatus = false;
-    boolean regisStatus = false;
     int globalID = 0;
 
     public User() {
@@ -235,7 +231,7 @@ public class User {
                                 while (loopCart != 3) {
                                     System.out.print('\u000C');
                                     db.getCart(ChooseCart);
-                                    System.out.println("1) Buy\t2) DELETE\t3) Cancle ");
+                                    System.out.println("1) Buy\t2) Delete from cart\t3) Cancle");
                                     System.out.print("Choose Choice: ");
                                     int ChooseCartChoice = myObj.nextInt();
 

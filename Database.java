@@ -8,7 +8,6 @@ public class Database {
     Connection conn = null;
 
     public Database() {
-
         try {
             Class.forName(DB_DRIVER);
             conn = DriverManager.getConnection(DB_URL);
