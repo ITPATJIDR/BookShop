@@ -43,7 +43,7 @@ public class User {
                             System.out.println("Username already exists...");
                             Thread.sleep(1000);
                             System.out.print('\u000C');
-                            menu = 2;
+                            menu = 1;
                         } catch (Exception e) {
                             e.getMessage();
                         }
